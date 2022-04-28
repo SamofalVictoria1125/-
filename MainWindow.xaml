@@ -1,0 +1,66 @@
+﻿<Window x:Class="Курсовая.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Курсовая"
+        mc:Ignorable="d"
+        Title="Приморский политехнический колледж" Height="450" Width="800">
+    <Grid>
+
+        <Menu Background="#FFB01919">
+
+            <MenuItem Header="Справочники" Background="Black" BorderBrush="#FFB13D3D" FontWeight="Bold" OpacityMask="Black" Foreground="#FFFFD32F">
+                <MenuItem Header="Список кураторов" Background="Black">
+                    <MenuItem Header="Посмотреть список" Command="{Binding ViewCurators}"/>
+                    <MenuItem Header="Внести нового куратора" Command="{Binding CreateCurator}"/>
+                </MenuItem>
+                <MenuItem Header="Список студентов" Foreground="Black">
+                    <MenuItem Header="Посмотреть список" Command="{Binding ViewStudents}"/>
+                    <MenuItem Header="Внести нового студента" Command="{Binding CreateStudent}"/>
+                </MenuItem>
+                <MenuItem Header="Группы" Background="Black">
+                    <MenuItem Header="Создать группу" Command="{Binding CreateGroup}"/>
+                    <MenuItem Header="Список групп" Command="{Binding ViewGroups}"/>
+                </MenuItem>
+                <MenuItem Header="Журналы" Foreground="Black">
+                    <MenuItem Header="Создать журнал" Command="{Binding CreateJournal}"/>
+                    <MenuItem Header="Список журналов" Command="{Binding ViewJournals}"/>
+                    <MenuItem Header="Оформление журналов" Command="{Binding EditJournal}"/>
+                </MenuItem>
+                <MenuItem Header="Расписания экзаменов" Background="Black">
+                    <MenuItem Header="Создать расписание" Command="{Binding CreateSchedule}"/>
+                    <MenuItem Header="Список расписаний" Command="{Binding ViewSchedule}"/>
+                </MenuItem>
+                <MenuItem Header="Книжки успеваемости" Foreground="Black">
+                    <MenuItem Header="Создать книжку" Command="{Binding CreateBook}"/>
+                    <MenuItem Header="Список книжек" Command="{Binding ViewBook}"/>
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+        <StackPanel Height="164" Width="300" Margin="231,132,262.6,124" VerticalAlignment="Center" Background="White" >
+            <Label Content="Имя и фамилия" HorizontalAlignment="Center" FontFamily="Times New Roman"/>
+            <TextBox Text="{Binding Information}" Width="200" />
+            <Label Content="Логин" HorizontalAlignment="Center" FontFamily="Times New Roman"/>
+            <TextBox Text="{Binding User}" Width="200"/>
+            <Label Content="Пароль" HorizontalAlignment="Center" FontFamily="Times New Roman"/>
+            <PasswordBox x:Name="passwordBox" Width="200"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Height="23" Width="70" Background="Black" Content="Войти" Command="{Binding SaveSettings}" BorderBrush="Black" FontFamily="Times New Roman" FontStyle="Italic" Foreground="#FFBCAB12"/>
+            </StackPanel>
+        </StackPanel>
+        <Label Margin="140,77,462.6,241" RenderTransformOrigin="0.5,0.5" >
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-31.425"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+            <Label.Background>
+                <ImageBrush ImageSource="27-276692_graduation-clipart-vector-graduation-cap-transparent-background.png"/>
+            </Label.Background>
+        </Label>
+    </Grid>
+</Window>
