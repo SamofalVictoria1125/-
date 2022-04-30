@@ -10,7 +10,6 @@ using MySql.Data.MySqlClient;
 namespace Курсовая.Model
 {
 
-    //тут тоже я пока занята другим!!
     public class SqlModel
     {
         private SqlModel() { }
@@ -71,7 +70,6 @@ namespace Курсовая.Model
                             ID = dr.GetInt32("id"),
                             Title = dr.GetString("title"),
                             Year = dr.GetInt32("year"),
-                            curator_id = dr.GetInt32("curator_id")
                         });
                     }
                 }
@@ -93,6 +91,34 @@ namespace Курсовая.Model
             return ((TableAttribute)tableAtrributes.First()).Table;
         }
 
+
+
+        public List<Group> SelectGroupsRange(int skip, int count)
+        {
+            var groups = new List<Group>();
+            var mySqlDB = MySqlDB.GetDB();
+            string query = $"SELECT * FROM `group` g, curator c, specials s WHERE g.curator_id = c.id AND g.special_id = s.id LIMIT { skip},{count}";
+            if (mySqlDB.OpenConnection())
+            {
+                using (MySqlCommand mc = new MySqlCommand(query, mySqlDB.sqlConnection))
+                using (MySqlDataReader dr = mc.ExecuteReader())
+                {
+                    while (dr.Read())
+                    {
+                        var g = new Group
+                        {
+                            ID = dr.GetInt32("id"),
+                            Title = dr.GetString("title"),
+                            Year = dr.GetInt32("year"),
+                        };
+                        groups.Add(g);
+                    }
+                }
+                mySqlDB.CloseConnection();
+            }
+            return groups;
+        }
+
     }
-    
+
 }

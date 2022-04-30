@@ -105,13 +105,15 @@
     <Compile Include="Pages\ViewCurators.xaml.cs">
       <DependentUpon>ViewCurators.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\ViewGroups.xaml.cs">
-      <DependentUpon>ViewGroups.xaml</DependentUpon>
+    <Compile Include="Pages\ViewGroupsPage.xaml.cs">
+      <DependentUpon>ViewGroupsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Tools\ColumnAttribute.cs" />
     <Compile Include="Tools\CommandVM.cs" />
     <Compile Include="Tools\CurrentPageControl.cs" />
     <Compile Include="Tools\TableAttribute.cs" />
+    <Compile Include="View\BaseVM.cs" />
+    <Compile Include="View\MainV.cs" />
     <Compile Include="View\SettingsVM.cs" />
     <Compile Include="View\ViewCurators.cs" />
     <Compile Include="View\ViewGroups.cs" />
@@ -132,7 +134,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\ViewGroups.xaml">
+    <Page Include="Pages\ViewGroupsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

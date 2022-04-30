@@ -10,18 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Курсовая.View;
 
 namespace Курсовая.Pages
 {
-    /// <summary>
-    /// Логика взаимодействия для ViewGroup.xaml
-    /// </summary>
-    public partial class ViewGroups : Window
+    public partial class ViewGroupsPage : Window
     {
-        public ViewGroups()
+        public ViewGroupsPage()
         {
             InitializeComponent();
+            DataContext = new ViewGroupsVM();
         }
     }
 }

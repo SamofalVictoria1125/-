@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 using Курсовая.NewFolder1;
 using Курсовая.Tools;
 using Курсовая.Model;
+using MySql.Data.MySqlClient;
 
 namespace Курсовая.View
 {
 
-    //я знаю что тут делать, но пока другим занята
-    class ViewGroupsVM : Base
+    class ViewGroupsVM : BaseVM
     {
         private List<Group> groups;
         private List<int> pageIndexes;

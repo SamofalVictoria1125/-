@@ -36,6 +36,10 @@
                     <MenuItem Header="Создать книжку" Command="{Binding CreateBook}"/>
                     <MenuItem Header="Список книжек" Command="{Binding ViewBook}"/>
                 </MenuItem>
+                <MenuItem Header="Группы" Foreground="Black">
+                    <MenuItem Header="Создать группу" Command="{Binding CreateGroup}"/>
+                    <MenuItem Header="Список групп" Command="{Binding ViewGroup}"/>
+                </MenuItem>
             </MenuItem>
         </Menu>
         <StackPanel Height="164" Width="300" Margin="231,132,262.6,124" VerticalAlignment="Center" Background="White" >
