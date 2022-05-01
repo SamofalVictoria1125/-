@@ -16,7 +16,7 @@ using Курсовая.View;
 
 namespace Курсовая.Pages
 {
-    public partial class ViewGroupsPage : Window
+    public partial class ViewGroupsPage : Page
     {
         public ViewGroupsPage()
         {

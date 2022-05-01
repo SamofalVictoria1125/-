@@ -24,22 +24,12 @@ namespace Курсовая.View
         {
             this.passwordBox = passwordBox;
 
-            //помогите почему он красный!!!
 
             Server = Properties.Settings.Default.server;
             User = Properties.Settings.Default.user;
             DB = Properties.Settings.Default.db;
             passwordBox.Password = Properties.Settings.Default.pass;
 
-            TestConnection = new CommandVM(() => {
-                var db = MySqlDB.GetDB();
-                db.InitConnection(Server, User, DB, passwordBox.Password);
-                if (db.OpenConnection())
-                {
-                    db.CloseConnection();
-                    System.Windows.MessageBox.Show("Соединение успешно!");
-                }
-            });
 
             SaveSettings = new CommandVM(() => {
                 Properties.Settings.Default.user = User;
@@ -47,7 +37,7 @@ namespace Курсовая.View
                 Properties.Settings.Default.pass = passwordBox.Password;
                 Properties.Settings.Default.server = Server;
                 Properties.Settings.Default.Save();
-                System.Windows.MessageBox.Show("Данные сохранены!");
+                System.Windows.MessageBox.Show("Вы успешно вошли!");
             });
         }
     }

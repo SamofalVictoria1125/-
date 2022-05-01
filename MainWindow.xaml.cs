@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Курсовая.DB;
 using Курсовая.Model;
+using Курсовая.View;
 
 namespace Курсовая
 {
@@ -31,6 +32,8 @@ namespace Курсовая
                 CuratorModel curatorModel = new CuratorModel();
                 var curators = curatorModel.GetCuratorByFIO("п");
                 SqlModel.GetInstance().CloseConnection();
+
+                DataContext = new SettingsVM(passwordBox);
             }
         }
     }

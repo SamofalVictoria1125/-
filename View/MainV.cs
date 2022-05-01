@@ -26,7 +26,7 @@ namespace Курсовая.View
         {
             currentPageControl = new CurrentPageControl();
             currentPageControl.PageChanged += CurrentPageControl_PageChanged;
-
+            currentPageControl.SetPage(new Page());
             ViewGroups = new CommandVM(() => {
                 currentPageControl.SetPage(new ViewGroupsPage());
             });
