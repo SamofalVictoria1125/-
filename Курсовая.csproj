@@ -119,7 +119,7 @@
     <Compile Include="View\MainV.cs" />
     <Compile Include="View\SettingsVM.cs" />
     <Compile Include="View\ViewCurators.cs" />
-    <Compile Include="View\ViewGroups.cs" />
+    <Compile Include="View\ViewGroupsVM.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>

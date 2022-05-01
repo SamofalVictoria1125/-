@@ -14,13 +14,11 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Курсовая.DB;
 using Курсовая.Model;
-using Курсовая.View;
+using Курсовая.NewFolder1;
 
 namespace Курсовая
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
+
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -33,7 +31,6 @@ namespace Курсовая
                 var curators = curatorModel.GetCuratorByFIO("п");
                 SqlModel.GetInstance().CloseConnection();
 
-                DataContext = new SettingsVM(passwordBox);
             }
         }
     }
