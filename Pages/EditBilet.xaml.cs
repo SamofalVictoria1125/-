@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace Курсовая.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для ViewCurators.xaml
+    /// Логика взаимодействия для EditBilet.xaml
     /// </summary>
-    public partial class ViewCurators : Page
+    public partial class EditBilet : Page
     {
-        public ViewCurators()
+        public EditBilet()
         {
             InitializeComponent();
         }

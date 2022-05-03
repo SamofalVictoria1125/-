@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace Курсовая.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для ViewCurators.xaml
+    /// Логика взаимодействия для ViewUchets.xaml
     /// </summary>
-    public partial class ViewCurators : Page
+    public partial class ViewUchets : Page
     {
-        public ViewCurators()
+        public ViewUchets()
         {
             InitializeComponent();
         }
