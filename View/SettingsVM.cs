@@ -13,11 +13,10 @@ namespace Курсовая.View
     {
         PasswordBox passwordBox;
 
-        public string Server { get; set; }
-        public string User { get; set; }
-        public string DB { get; set; }
+        public string FIO { get; set; }
+        public string Login { get; set; }
+        public string Password { get; set; }
 
-        public CommandVM TestConnection { get; set; }
         public CommandVM SaveSettings { get; set; }
 
         public SettingsVM(PasswordBox passwordBox)
@@ -25,17 +24,17 @@ namespace Курсовая.View
             this.passwordBox = passwordBox;
 
 
-            Server = Properties.Settings.Default.server;
-            User = Properties.Settings.Default.user;
-            DB = Properties.Settings.Default.db;
+            FIO = Properties.Settings.Default.server;
+            Login = Properties.Settings.Default.user;
+            Password = Properties.Settings.Default.db;
             passwordBox.Password = Properties.Settings.Default.pass;
 
 
             SaveSettings = new CommandVM(() => {
-                Properties.Settings.Default.user = User;
-                Properties.Settings.Default.db = DB;
+                Properties.Settings.Default.user = Login;
+                Properties.Settings.Default.db = Password;
                 Properties.Settings.Default.pass = passwordBox.Password;
-                Properties.Settings.Default.server = Server;
+                Properties.Settings.Default.server = FIO;
                 Properties.Settings.Default.Save();
                 System.Windows.MessageBox.Show("Вы успешно вошли!");
             });

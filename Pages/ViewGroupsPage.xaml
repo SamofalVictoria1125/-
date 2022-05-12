@@ -6,13 +6,17 @@
       xmlns:local="clr-namespace:Курсовая.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Page1">
+      Title="Список групп">
 
-    <Grid>
-        <StackPanel HorizontalAlignment="Center">
-            <Label>
-                <Button Content="говно"/>
-            </Label>
+    <Grid Background="#FFB01919">
+        <StackPanel Width="484" Height="200" HorizontalAlignment="Left" Margin="150,125,0,124.6">
+            <Label Content="Номер группы"/>
+            <TextBox Text="{Binding NumberGroup}"/>
+            <Label FontStyle="Oblique" Content="Куратор группы"/>
+            <TextBox Text="{Binding Curatot}"/>
+            <Label Content="Студенты"/>
+            <TextBox Text="{Binding Students}"/>
+            <Button Height="23" Background="Black" Content="Подтвердить" Command="{Binding SaveSettings}" BorderBrush="Black" FontFamily="Times New Roman" FontStyle="Italic" Foreground="#FFBCAB12" Margin="0,0,207,0" HorizontalAlignment="Right" Width="70"/>
         </StackPanel>
     </Grid>
 </Page>

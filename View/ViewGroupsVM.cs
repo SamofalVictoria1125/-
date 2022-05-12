@@ -18,7 +18,7 @@ namespace Курсовая.View
         private int selectedIndex;
         private int viewRowsCount;
 
-        public List<Group> Groups
+        public List<Group> ViewGroups
         {
             get => groups;
             set
@@ -44,7 +44,7 @@ namespace Курсовая.View
             set
             {
                 selectedIndex = value;
-                Groups = SqlModel.GetInstance().SelectGroupsRange((selectedIndex - 1) * ViewRowsCount, ViewRowsCount);
+                ViewGroups = SqlModel.GetInstance().SelectGroupsRange((selectedIndex - 1) * ViewRowsCount, ViewRowsCount);
                 Signal();
             }
         }
@@ -76,6 +76,8 @@ namespace Курсовая.View
                 if (SelectedIndex < PageIndexes.Last())
                     SelectedIndex++;
             });
+
+            
         }
 
         private void InitPages()

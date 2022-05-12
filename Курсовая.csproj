@@ -111,117 +111,137 @@
     <Compile Include="NewFolder1\Journal.cs" />
     <Compile Include="NewFolder1\Student.cs" />
     <Compile Include="NewFolder1\Uchet.cs" />
-    <Compile Include="Pages\EditBilet.xaml.cs">
-      <DependentUpon>EditBilet.xaml</DependentUpon>
+    <Compile Include="Pages\EditBiletPage.xaml.cs">
+      <DependentUpon>EditBiletPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\EditBook.xaml.cs">
-      <DependentUpon>EditBook.xaml</DependentUpon>
+    <Compile Include="Pages\EditBookPage.xaml.cs">
+      <DependentUpon>EditBookPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\EditCurator.xaml.cs">
-      <DependentUpon>EditCurator.xaml</DependentUpon>
+    <Compile Include="Pages\EditCuratorPage.xaml.cs">
+      <DependentUpon>EditCuratorPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\EditExam.xaml.cs">
-      <DependentUpon>EditExam.xaml</DependentUpon>
+    <Compile Include="Pages\EditExamPage.xaml.cs">
+      <DependentUpon>EditExamPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\EditGroup.xaml.cs">
-      <DependentUpon>EditGroup.xaml</DependentUpon>
+    <Compile Include="Pages\EditGroupPage.xaml.cs">
+      <DependentUpon>EditGroupPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\EditJournal.xaml.cs">
-      <DependentUpon>EditJournal.xaml</DependentUpon>
+    <Compile Include="Pages\EditJournalPage.xaml.cs">
+      <DependentUpon>EditJournalPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\EditStudent.xaml.cs">
-      <DependentUpon>EditStudent.xaml</DependentUpon>
+    <Compile Include="Pages\EditStudentPage.xaml.cs">
+      <DependentUpon>EditStudentPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\EditUchet.xaml.cs">
-      <DependentUpon>EditUchet.xaml</DependentUpon>
+    <Compile Include="Pages\EditUchetPage.xaml.cs">
+      <DependentUpon>EditUchetPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\ViewBilets.xaml.cs">
-      <DependentUpon>ViewBilets.xaml</DependentUpon>
+    <Compile Include="Pages\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\ViewBooks.xaml.cs">
-      <DependentUpon>ViewBooks.xaml</DependentUpon>
+    <Compile Include="Pages\ViewBiletsPage.xaml.cs">
+      <DependentUpon>ViewBiletsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\ViewCurators.xaml.cs">
-      <DependentUpon>ViewCurators.xaml</DependentUpon>
+    <Compile Include="Pages\ViewBooksPage.xaml.cs">
+      <DependentUpon>ViewBooksPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\ViewExams.xaml.cs">
-      <DependentUpon>ViewExams.xaml</DependentUpon>
+    <Compile Include="Pages\ViewCuratorsPage.xaml.cs">
+      <DependentUpon>ViewCuratorsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ViewExamsPage.xaml.cs">
+      <DependentUpon>ViewExamsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\ViewGroupsPage.xaml.cs">
       <DependentUpon>ViewGroupsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\ViewJournals.xaml.cs">
-      <DependentUpon>ViewJournals.xaml</DependentUpon>
+    <Compile Include="Pages\ViewJournalsPage.xaml.cs">
+      <DependentUpon>ViewJournalsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\ViewStudents.xaml.cs">
-      <DependentUpon>ViewStudents.xaml</DependentUpon>
+    <Compile Include="Pages\ViewStudentsPage.xaml.cs">
+      <DependentUpon>ViewStudentsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\ViewUchets.xaml.cs">
-      <DependentUpon>ViewUchets.xaml</DependentUpon>
+    <Compile Include="Pages\ViewUchetsPage.xaml.cs">
+      <DependentUpon>ViewUchetsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Tools\ColumnAttribute.cs" />
     <Compile Include="Tools\CommandVM.cs" />
     <Compile Include="Tools\CurrentPageControl.cs" />
     <Compile Include="Tools\TableAttribute.cs" />
     <Compile Include="View\BaseVM.cs" />
+    <Compile Include="View\EditBiletVM.cs" />
+    <Compile Include="View\EditBookVM.cs" />
+    <Compile Include="View\EditExamVM.cs" />
+    <Compile Include="View\EditGroupVM.cs" />
+    <Compile Include="View\EditJournalVM.cs" />
+    <Compile Include="View\EditStudentVM.cs" />
+    <Compile Include="View\EditUchetVM.cs" />
     <Compile Include="View\MainV.cs" />
     <Compile Include="View\SettingsVM.cs" />
+    <Compile Include="View\ViewBiletsVM.cs" />
+    <Compile Include="View\ViewBooksVM.cs" />
     <Compile Include="View\ViewCurators.cs" />
+    <Compile Include="View\ViewExamsVM.cs" />
     <Compile Include="View\ViewGroupsVM.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DB\DBMySqlUtils.cs" />
+    <Compile Include="View\ViewJournalsVM.cs" />
+    <Compile Include="View\ViewStudentsVM.cs" />
+    <Compile Include="View\ViewUchetsVM.cs" />
     <Page Include="MainWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\EditBilet.xaml">
+    <Page Include="Pages\EditBiletPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\EditBook.xaml">
+    <Page Include="Pages\EditBookPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\EditCurator.xaml">
+    <Page Include="Pages\EditCuratorPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\EditExam.xaml">
+    <Page Include="Pages\EditExamPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\EditGroup.xaml">
+    <Page Include="Pages\EditGroupPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\EditJournal.xaml">
+    <Page Include="Pages\EditJournalPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\EditStudent.xaml">
+    <Page Include="Pages\EditStudentPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\EditUchet.xaml">
+    <Page Include="Pages\EditUchetPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\ViewBilets.xaml">
+    <Page Include="Pages\Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\ViewBooks.xaml">
+    <Page Include="Pages\ViewBiletsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\ViewCurators.xaml">
+    <Page Include="Pages\ViewBooksPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\ViewExams.xaml">
+    <Page Include="Pages\ViewCuratorsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ViewExamsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -229,15 +249,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\ViewJournals.xaml">
+    <Page Include="Pages\ViewJournalsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\ViewStudents.xaml">
+    <Page Include="Pages\ViewStudentsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\ViewUchets.xaml">
+    <Page Include="Pages\ViewUchetsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

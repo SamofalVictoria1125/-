@@ -5,9 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Курсовая"
         mc:Ignorable="d"
-        Title="Приморский политехнический колледж" Height="450" Width="800">
+        Title="Приморский политехнический колледж" Background="#FFB01919" Height="450" Width="800">
     <Grid>
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
         <Menu Background="#FFB01919">
 
             <MenuItem Header="Справочники" Background="Black" BorderBrush="#FFB13D3D" FontWeight="Bold" OpacityMask="Black" Foreground="#FFFFD32F">
@@ -20,7 +23,7 @@
                     <MenuItem Header="Внести нового студента" Command="{Binding CreateStudent}"/>
                 </MenuItem>
                 <MenuItem Header="Группы" Background="Black">
-                    <MenuItem Header="Создать группу" Command="{Binding CreateGroup}"/>
+                    <MenuItem Header="Создать группу" Command="{Binding CreateGroups}"/>
                     <MenuItem Header="Список групп" Command="{Binding ViewGroups}"/>
                 </MenuItem>
                 <MenuItem Header="Журналы" Foreground="Black">
@@ -38,29 +41,7 @@
                 </MenuItem>
             </MenuItem>
         </Menu>
-        <StackPanel Height="164" Width="300" Margin="231,132,262.6,124" VerticalAlignment="Center" Background="White" >
-            <Label Content="Имя и фамилия" HorizontalAlignment="Center" FontFamily="Times New Roman"/>
-            <TextBox Text="{Binding Information}" Width="200" />
-            <Label Content="Логин" HorizontalAlignment="Center" FontFamily="Times New Roman"/>
-            <TextBox Text="{Binding User}" Width="200"/>
-            <Label Content="Пароль" HorizontalAlignment="Center" FontFamily="Times New Roman"/>
-            <PasswordBox x:Name="passwordBox" Width="200"/>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <Button Height="23" Width="70" Background="Black" Content="Войти" Command="{Binding SaveSettings}" BorderBrush="Black" FontFamily="Times New Roman" FontStyle="Italic" Foreground="#FFBCAB12"/>
-            </StackPanel>
-        </StackPanel>
-        <Label Margin="140,77,462.6,241" RenderTransformOrigin="0.5,0.5" >
-            <Label.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-31.425"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Label.RenderTransform>
-            <Label.Background>
-                <ImageBrush ImageSource="27-276692_graduation-clipart-vector-graduation-cap-transparent-background.png"/>
-            </Label.Background>
-        </Label>
+
+        <Frame Content="{Binding CurrentPage}" Background="{x:Null}" Grid.Row="1" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

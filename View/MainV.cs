@@ -21,14 +21,24 @@ namespace Курсовая.View
         }
 
         public CommandVM ViewGroups { get; set; }
+        public CommandVM ViewCurators { get; set; }
+        public CommandVM ViewStudents { get; set; }
 
         public MainV()
         {
             currentPageControl = new CurrentPageControl();
             currentPageControl.PageChanged += CurrentPageControl_PageChanged;
-            currentPageControl.SetPage(new Page());
+            currentPageControl.SetPage(new Login());
             ViewGroups = new CommandVM(() => {
                 currentPageControl.SetPage(new ViewGroupsPage());
+            });
+
+            ViewCurators = new CommandVM(() => {
+                currentPageControl.SetPage(new ViewCuratorsPage());
+            });
+
+            ViewStudents = new CommandVM(() => {
+                currentPageControl.SetPage(new ViewStudentsPage(null));
             });
         }
 

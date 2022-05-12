@@ -1,0 +1,37 @@
+﻿<Page x:Class="Курсовая.Pages.Login"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Курсовая.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Login">
+
+    <Grid>
+        <StackPanel Height="164" Width="300" Margin="246.2,137.4,253.8,0" VerticalAlignment="Top" Background="White" >
+            <Label Content="Имя и фамилия" HorizontalAlignment="Center" FontFamily="Times New Roman"/>
+            <TextBox Text="{Binding Information}" Width="200" />
+            <Label Content="Логин" HorizontalAlignment="Center" FontFamily="Times New Roman"/>
+            <TextBox Text="{Binding User}" Width="200"/>
+            <Label Content="Пароль" HorizontalAlignment="Center" FontFamily="Times New Roman"/>
+            <PasswordBox x:Name="passwordBox" Width="200"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Height="23" Width="70" Background="Black" Content="Войти" Command="{Binding SaveSettings}" BorderBrush="Black" FontFamily="Times New Roman" FontStyle="Italic" Foreground="#FFBCAB12"/>
+            </StackPanel>
+        </StackPanel>
+        <Label Margin="165,95.6,0,0" RenderTransformOrigin="0.5,0.5" Height="78.4" VerticalAlignment="Top" HorizontalAlignment="Left" Width="179" >
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-31.425"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+            <Label.Background>
+                <ImageBrush ImageSource="/Курсовая;component/Image/27-276692_graduation-clipart-vector-graduation-cap-transparent-background.png"/>
+            </Label.Background>
+        </Label>
+    </Grid>
+</Page>

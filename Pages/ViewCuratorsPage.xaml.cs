@@ -12,30 +12,20 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Курсовая.DB;
-using Курсовая.Model;
 using Курсовая.NewFolder1;
-using Курсовая.Pages;
 using Курсовая.View;
 
-namespace Курсовая
+namespace Курсовая.Pages
 {
-
-    public partial class MainWindow : Window
+    /// <summary>
+    /// Логика взаимодействия для ViewCurators.xaml
+    /// </summary>
+    public partial class ViewCuratorsPage : Page
     {
-        public MainWindow()
+        public ViewCuratorsPage()
         {
             InitializeComponent();
-
-            if (SqlModel.GetInstance().OpenConnection())
-            {
-                CuratorModel curatorModel = new CuratorModel();
-                var curators = curatorModel.GetCuratorByFIO("п");
-                SqlModel.GetInstance().CloseConnection();
-
-            }
-
-            DataContext = new MainV();
+            DataContext = new ViewCurators();
         }
     }
 }
